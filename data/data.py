@@ -36,6 +36,7 @@ class CIFAR10data:
                                                 max_width=8, p=0.1
                                             ),
                                 A.RandomBrightnessContrast(p=0.2),
+                                A.HorizontalFlip(p=0.5),
                                 A.ToGray(p=0.1),
                                 A.Normalize(
                                     mean=tuple(mean), 
