@@ -32,8 +32,10 @@ class CIFAR10data:
                                                    p=0.2
                                                 ),
                                 A.CoarseDropout(
-                                                max_holes=2, max_height=8, 
-                                                max_width=8, p=0.1
+                                                max_holes=1, max_height=16, 
+                                                max_width=16, min_holes=1,
+                                                min_height=16, min_width=16,
+                                                fill_value=mean, mask_fill_value=None
                                             ),
                                 A.RandomBrightnessContrast(p=0.2),
                                 A.HorizontalFlip(p=0.5),
